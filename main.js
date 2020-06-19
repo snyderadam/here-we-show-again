@@ -193,11 +193,13 @@ let heading15 = document.createElement ('p')
 let kata15 = []
 let counter15 = 0
 while (counter15 <= 20){
-    kata5.push(counter15)
+    
     counter15 += 1
-    let addThem = kata15.reduce(Math.sum)
+    
 }
-parentElement.append(addThem)
+parentElement.append()
+
+//made variable outside the loop that added where the counter is and added that 
 
 
 
