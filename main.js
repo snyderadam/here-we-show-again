@@ -1,7 +1,7 @@
 
 //Cohorts: James Hardy, Ben Lynch
 
-const parentElement = document.querySelector(".kata-lists")
+const parentElement = document.querySelector("body")
 const sampleArray = [
     469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 
     456, 21, 398, 339, 882, 848, 179, 535, 940, 472,
@@ -164,11 +164,12 @@ let heading13 = document.createElement ('p')
 let kata13 = []
 let counter13 = 0
 while (counter13 <= sampleArray.length){
-    counter13 += 1
+    
     if ((sampleArray [counter13] % 2) !== 0){
         kata13.push(sampleArray[counter13])
        
     }
+    counter13 += 1
 }
 parentElement.append(kata13)
 
@@ -178,7 +179,7 @@ let heading14 = document.createElement ('p')
 
 let kata14 = []
 let counter14 = 0
-while (counter14 <= sampleArray.length){
+while (counter14 < sampleArray.length){
     let squareRoot = sampleArray[counter14] * sampleArray[counter14] 
     kata14.push(squareRoot)
     counter14 += 1
@@ -191,21 +192,55 @@ let heading15 = document.createElement ('p')
   heading15.append('Kata 15')
 
 let kata15 = []
-let counter15 = 0
+let counter15 = 1
+
 while (counter15 <= 20){
-    
-    counter15 += 1
-    
+  kata15.push(counter15)
+  counter15 += 1
+  }
+let sumElement = kata15.reduce(function(a, b){
+  return a + b;
+  }, 0);
+  parentElement.append(sumElement)
+
+  
+let heading16 = document.createElement ('p')
+  parentElement.append(heading16)
+  heading16.append('Kata 16')
+
+let kata16 = []
+let counter16 = 0
+
+while (counter16 < sampleArray.length){
+  kata16.push(sampleArray[counter16])
+  counter16 += 1
+  console.log(kata16)
 }
-parentElement.append()
-
-//made variable outside the loop that added where the counter is and added that 
-
-
-
+let sumElement2 = kata16.reduce(function(a, b){
+  return a + b;
+  }, 0);
+  parentElement.append(sumElement2)
 
 
+// let sumOfNumbers = 0
+// for(count through some numbers){
+// add count to sumOfNumbers
+// }
+// append sumOfNumbers to main
 
+let heading17 = document.createElement ('p')
+  parentElement.append(heading17)
+  heading17.append('Kata 17')
+
+  let minArray = Math.min(...sampleArray)
+  parentElement.append(minArray)
+
+  let heading18 = document.createElement ('p')
+  parentElement.append(heading18)
+  heading18.append('Kata 18')
+
+  let maxArray = Math.max(...sampleArray)
+  parentElement.append(maxArray)
 
 
 
